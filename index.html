@@ -4,18 +4,64 @@
     <title>The AJAXson 5</title>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="request-gif.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Love Ya Like A Sister" rel="stylesheet">
+    <style>
+      body {
+        text-align: center;
+        background: black;
+        color: white;
+      }
+      form {
+        margin: 0 auto;
+      }
+      img {
+        border: 2px solid white;
+        border-radius: 10px;
+        max-width: 500px;
+      }
+      label {
+        padding: 10px;
+      }
+      h1 {
+        font-family: 'Love Ya Like A Sister';
+        text-align: center;
+        font-size: 65px;
+        color: #fffaaa;
+        margin: 60px 0 0 0;
+      }
+      .error {
+        color: red;
+        font-weight: bold;
+      }
+      @media (max-width: 500px) {
+        h1 {
+          font-size: 50px;
+          margin-top: 20px;
+          line-height: 40px;
+        }
+      }
+    </style>
 </head>
 <body>
     <h1>The AJAXson 5</h1>
 
     <form id="form-gif-request" />
-        <label>What kind of Jackson 5 related gif do you want?</label>
+        <label>What kind of Jackson 5 related gif do you want?
         <input name="tag" type="text"/>
-        <input type="submit" value="Get my Gif!" />
+        </label>
+        <br>
+        <label>Solve this riddle to prove you are not a robot:
+        <input type="text" id="captcha"/>
+        <b>Jacksons are better than 1.</b></label>
+        <br>
+        <input type="submit" value="Get my gif!" />
     </form>
+    <div class="error" id="error-msg" hidden="true">
+      No gifs for you!
+    </div>
 
     <img id="gif" src="" hidden="true"/>
-    <p id="feedback" hidden="true`"></p>
+    <p id="feedback" hidden="true"></p>
 
 </body>
 </html>
