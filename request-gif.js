@@ -24,12 +24,11 @@ function fetchAndDisplayGif(event) {
     // configure a few parameters to attach to our request
     var params = {
         api_key: "dc6zaTOxFJmzC",
-        tag : "jackson 5" // TODO should be e.g. "jackson 5 dance"
     };
 
     // make an ajax request for a random GIF
     $.ajax({
-        url: "https://api.giphy.com/v1/gifs/random", // TODO where should this request be sent?
+        url: "https://api.giphy.com/v1/gifs/random",
         data: params, // attach those extra parameters onto the request
         success: function(response) {
             // if the response comes back successfully, the code in here will execute.
@@ -63,7 +62,6 @@ function fetchAndDisplayGif(event) {
         }
     });
 
-    // TODO
     // give the user a "Loading..." message while they wait
     $('#feedback').attr('hidden', false);
     $('#feedback').text("Loading...");
