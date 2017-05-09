@@ -5,29 +5,24 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="request-gif.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Love Ya Like A Sister" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
       body {
         text-align: center;
-        background: black;
-        color: white;
       }
       form {
         margin: 0 auto;
       }
       img {
-        border: 2px solid white;
+        border: 2px solid black;
         border-radius: 10px;
-        max-width: 500px;
-      }
-      label {
-        padding: 10px;
+        width: 500px;
       }
       h1 {
         font-family: 'Love Ya Like A Sister';
-        text-align: center;
         font-size: 65px;
-        color: #fffaaa;
-        margin: 60px 0 0 0;
+        color: red;
+        margin: 60px 0 30px 0;
       }
       .error {
         color: red;
@@ -39,6 +34,9 @@
           margin-top: 20px;
           line-height: 40px;
         }
+        img {
+          width: auto;
+        }
       }
     </style>
 </head>
@@ -46,15 +44,18 @@
     <h1>The AJAXson 5</h1>
 
     <form id="form-gif-request" />
-        <label>What kind of Jackson 5 related gif do you want?
-        <input name="tag" type="text"/>
-        </label>
-        <br>
-        <label>Solve this riddle to prove you are not a robot:
-        <input type="text" id="captcha"/>
-        <b>Jacksons are better than 1.</b></label>
-        <br>
-        <input type="submit" value="Get my gif!" />
+      <div class="panel panel-default">
+          <h3>What kind of Jackson 5 related gif do you want?</h3>
+          <input placeholder="Tell us here" name="tag" type="text"/>
+          </label>
+      </div>
+      <br/>
+      <div class="panel panel-default">
+          <h5>Solve this riddle to prove you are not a robot:</h5>
+          <input type="text" id="captcha"/>
+          <b>Jacksons are better than 1.</b>
+      </div>
+      <input class="btn btn-primary" type="submit" value="Get my gif!" />
     </form>
     <div class="error" id="error-msg" hidden="true">
       No gifs for you!
